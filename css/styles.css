@@ -112,6 +112,14 @@ body {
   font-size: 24px;
   text-decoration: solid;
 }
+.fw-bolder{
+  font-family: 'Segoe UI';
+  padding-bottom: 15px;
+}
+.judul{
+  font-size: 16px;
+  font-family: 'Segoe UI';
+}
 
 hr {
   margin: 1rem 0;
