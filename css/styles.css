@@ -364,6 +364,21 @@ button {
 button:focus:not(:focus-visible) {
   outline: 0;
 }
+.wp-block-uagb-container uagb-block-51f11fd7{
+  box-shadow: 0px 0px #00000070;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top: important;
+  margin-bottom: important;
+  row-gap: 35px;
+  column-gap: 20px;
+  overflow: visible;
+  border-color: inherit;
+  background-color: var(--ast-global-color-0);
+}
+
 
 input,
 button,
@@ -4290,7 +4305,11 @@ textarea.form-control-lg {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-  width: 100%;
+  width: 75%;
+  height: auto;
+  display: block;
+  margin: auto;
+  align-content: center;
 }
 
 .card-img,
