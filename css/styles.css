@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 /*!
 * Start Bootstrap - Modern Business v5.0.7 (https://startbootstrap.com/template-overviews/modern-business)
 * Copyright 2013-2023 Start Bootstrap
@@ -93,7 +93,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Poppins', sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -103,6 +103,29 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+/* Gaya untuk tombol navigasi */
+.nav-button {
+  background-color: #2fb2c1; /* Warna latar belakang tombol */
+  color: #ffffff; /* Warna teks tombol */
+  border: none; /* Menghapus garis batas tombol */
+  padding: 10px 20px; /* Padding tombol */
+  cursor: pointer; /* Mengubah kursor saat mengarahkan ke tombol */
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.paket{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gaya saat mengarahkan kursor ke tombol */
+.nav-button:hover {
+  background-color: #022c58; /* Warna latar belakang saat hover */
+  color: #ffffff; /* Warna teks tombol */
+}
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -127,7 +150,6 @@ body {
 #footer .footer-top .footer-info h3 {
   font-size: 18px;
   margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
   line-height: 1;
   color: #a2cce3;
   font-weight: 600;
@@ -137,7 +159,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "poppins", sans-serif;
   color: #fff;
 }
 
@@ -172,12 +194,14 @@ body {
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul i {
@@ -185,16 +209,19 @@ body {
   color: #a2cce3;
   font-size: 18px;
   line-height: 1;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul li {
   padding: 10px 0;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul li:first-child {
   padding-top: 0;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul a {
@@ -202,6 +229,7 @@ body {
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul a:hover {
@@ -223,6 +251,69 @@ body {
 #footer .credits a {
   color: #a2cce3;
 }
+/* Gaya untuk navigasi footer */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+/* Gaya untuk dropdown */
+.footer-nav ul li.dropdown:hover .sub-menu {
+  display: block;
+}
+
+.footer-nav ul li .sub-menu {
+  display: none;
+  margin-left: 20px;
+}
+
+.footer-nav ul li .sub-menu li {
+  margin-bottom: 5px;
+}
+/* Gaya untuk submenu */
+/* Gaya untuk submenu */
+.footer-nav ul li.dropdown .sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 27%; /* Muncul di bawah tautan "Layanan" */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0; /* Atur opasitas menjadi 0 */
+  pointer-events: none; /* Hindari interaksi dengan elemen yang tidak terlihat */
+  transition: opacity 0.3s ease-in-out; /* Efek transisi opasitas */
+}
+
+/* Gaya untuk item menu dropdown */
+.footer-nav ul li.dropdown:hover .sub-menu,
+.footer-nav ul li.dropdown.active .sub-menu {
+  display: block;
+  opacity: 1; /* Munculkan submenu dengan opasitas penuh */
+  pointer-events: auto; /* Aktifkan interaksi dengan submenu */
+}
+#color-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1; /* Menempatkan div di bawah submenu */
+  transition: background-color 0.3s ease-in-out;
+}
+
+
 
 .banner{
   text-align: center;
@@ -240,7 +331,6 @@ body {
 }
 .judul{
   font-size: 16px;
-  font-family: 'Segoe UI';
 }
 
 hr {
@@ -553,9 +643,7 @@ select:disabled {
 button,
 [type=button],
 [type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
+
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
@@ -610,11 +698,6 @@ legend + * {
   height: auto;
 }
 
-[type=search] {
-  outline-offset: -2px;
-  -webkit-appearance: textfield;
-}
-
 /* rtl:raw:
 [type="tel"],
 [type="url"],
@@ -629,11 +712,6 @@ legend + * {
 
 ::-webkit-color-swatch-wrapper {
   padding: 0;
-}
-
-::file-selector-button {
-  font: inherit;
-  -webkit-appearance: button;
 }
 
 output {
