@@ -125,6 +125,12 @@ body {
   color: #ffffff; /* Warna teks tombol */
 }
 
+.bbb{
+  display: flex;
+  height: 100vh;
+  text-align: justify;
+}
+
 .maps {
   text-decoration: none;
   color: #000;

@@ -1,110 +1,56 @@
 <!DOCTYPE html>
-<html lang="id">
-    <head>
+<html>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content />
-    <meta name="author" content />
-    <link rel="manifes" href="/manifes.json">
-    <meta name="theme-color" content="#B30000">
-    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAABR1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8YGBiurq76+vry8vLt7e3g4OBmZmYGBgbLy8skJCQKCgr4+Pjx8fHj4+NJSUlEREQvLy8rKyv8/PyNjY2KiooICAj09PSwsLA+Pj4nJycTExPCwsKnp6ddXV0PDw/p6enb29vX19fHx8ehoaF7e3tsbGxXV1c5OTnPz8+8vLy0tLSrq6ucnJyTk5OFhYWBgYFhYWFOTk4dHR3R0dF1dXX/wo9JAAAANnRSTlMAjtH92wYd8ffn1sxIIgL0CN9LCosrJsjDtrOTkYlsV1NDGe+sTURAFgzpvrmqo5+GRrBdUC+j2ygUAAAFFElEQVR42tXb53rTMBQG4GPH2bOZbZrVdLI6GOc0nXRAoZMOKJS95/3/pomhJcSSbFl24L2C77G/o0i2AzJSyfGaNjYYi4YjgUAkHI0Njmm1bDIFfgjVh0tptJQuVeoh8FImMWyggFFJZMATwfHpMNoSns4GQbVi/io6cLVaBJUmrqNjQyOgSKqhoxT9NqiQ1VFaPAFuFa6jK0MFcCOnBdClQD4H0uYGUAFDto25YVSkkgEJd2KojC7RhFsRVChdB2eCw6iYlgIHrgyhcmUH09DU0QPxKbApZKAnjBDYkhxAjwwkwYbQAHpmIARCTQM9ZEwJ+6+jp+I5wfwPocfKKeAZRs9p3PUXfVAHpjsR9EG6AAy5GPpCzzAL4JMKY/+DvhmxXAEG0DdGBnpp6KMq9CgE0EeBIvztOvqqDH/Jos/moEtKR5/FoUsDfTcOf9JRyNNLMIF9MCk9AuoHoYgWVt/vkyL7J6toIQm/5dHKV2UBFu/zl8PgVbT04B4pce8BWooGwTSODN/ekAJ355EhC6ZptLCG59bfkWsH63juNVqYgY5MGi0sPcJzgY/k0g62vdpAC2HzHiTQCm08xraX2+TC9gq2vSBCKxOcnRgRfcK2+4tu67/6gYg4W3SDFYBO9sTDIK7/k7fEChCDcyFkBqCzIzw3/8ZN/deeETMANgGgzglAy4edYTggCS2z/qfECdBgb8bJtLmFbTvy9ScT+5xW4gaghRWpYVi4qD83wCBAKs0OYNqVGIZNs/7PSRAgDJBEaz0308kwLD/s1P+YRAEwxPwh6K3z/F2J+osCJKCG1iwGev3ASf0fLZGNADXmgchqSRMPw2VnHm+QnQB5GLMVgLZfYtvKts36fyayFeAGDIoDmD4G7AzD5lZX/YUBrkHMbgB69wTPPVwW1//omOwG0CFqOwB9/2YOg7D+T8l2gCiE+QGshqHFrP9eT/1FAUYh4iAA7X9lDAOj/uIAEQg4CUDbP8xhWODV30mAADsAw4fOGWNrk1H/E3IYgH0LWN5eDoO4/uJbwC4h07O13mE469T/sKf+4hKyx5DttLPJ32vRhfes+ovHkL0QcWy8wrbd7vp/WSDnAXT2Usz14vcwXNb/EzEIluIxqQD0/GIYzPrvMeov/jHS5ALQ8ZE5DL/qf0ZyAfLsDYnIU3MYzPovk2SAGmRlA1Dn+Nqxxa6/eEuWlA7QOb4K6i/elPK25WK7q4h7O0TSAcL8g4nYaeuAf/nFBxOoMAKoIjya1fsZoME5nqsjOJ6D0b8AMWir9C+AxntIpRT3IVUm3K8Ao0HomO5XgBne+6J9UmoRLSR4D6sPSKkW72E1VLHX4RIptLSGvWb5LywOW4vKrn9rjf/CAoawD8pwaQT7YPJfem0Ht9F3WegSR5+VoFsCfTYCHX0bhJt9/oAhUoQeefTRLPTKGShP/iOW/qxGk2Cpgj7RwFpGR1/oQWAopNEH6QIw1dEHDeDQ0HNV4EmV0WNjKeC6EkdPlXIgMGWgh2JTff6wufk/fNrt3cftsSbYNOVJE0tTYNuVMio3lgMHUhoqVk2BM/U0KpRugGMFHZXRiyAhU0FF8kGQM6JkHo1JkJarBtClyGwG3CgOoSs3i+DWXByllUZAhXHJCPEsqDIpcSPKk6BSshpFB6KzSVAtmJ0Joy2jM4kgeCI4ocVQIKZNBMFLzYY2yLgS4UGt0QRfhBK1/I1renS0/ff/0ah+7Ua+lgiBjJ+sbq51SND6yQAAAABJRU5ErkJggg==" sizes="16x16">    
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Modern Business - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
     <!-- Bootstrap icons-->
-    <style>
-        a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}html{height:100%;font-size:62.5%;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;text-rendering:optimizeLegibility}body,html{margin:0;padding:0}body{height:100%;font-size:1.4em;line-height:2rem;font-weight:400;font-family:-apple-system,BlinkMacSystemFont,San Francisco,Roboto,Segoe UI,Helvetica Neue,sans-serif;color:#1a1a1a;background-color:#f4f6f8;text-align:center;fill:currentColor;text-transform:none;letter-spacing:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body,main{-webkit-box-sizing:border-box;box-sizing:border-box}main{position:relative}main,section{width:100%;margin:0
-auto}section{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column;flex-direction:row;max-width:1036px;text-align:left}section,section
-article{-webkit-box-direction:normal}section
-article{-webkit-box-flex:2;-ms-flex:2 1 48.0rem;flex:2 1 48.0rem;-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row;margin:0
-2rem}section
-.card{display:block;width:100%;color:#1a1919;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:0;padding:2rem;background-color:#fff;border-radius:.3rem;-webkit-box-shadow:0 0 0 1px rgba(63,63,68,.05),0 1px 3px 0 rgba(63,63,68,.15);box-shadow:0 0 0 1px rgba(63,63,68,.05),0 1px 3px 0 rgba(63,63,68,.15);margin:0
-auto 2rem}section .card
-p{color:#1a1919}.columns.six{width:49%;min-width:460px}@media (max-width:550px){.columns.six{width:100%;min-width:auto}}.align-center{text-align:center}.side-elements{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.row{margin-bottom:2.5rem}input[type=email],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=url],select,textarea{position:relative;padding:.5rem 1rem;background-color:#fff;border:.1rem solid #c4cdd5;border-radius:.3rem;color:#31373d;-webkit-box-sizing:border-box;display:block;width:100%;font-size:1.6rem;line-height:2.4rem;min-width:7.5rem;height:auto;margin:0;max-width:100%;font-family:-apple-system,BlinkMacSystemFont,San Francisco,Roboto,Segoe UI,Helvetica Neue,sans-serif;-webkit-box-shadow:0 0 0 1px transparent,0 1px 0 0 rgba(22,29,37,.05);box-shadow:0 0 0 1px transparent,0 1px 0 0 rgba(22,29,37,.05);box-sizing:border-box;-webkit-transition:-webkit-box-shadow .2s cubic-bezier(.64,0,.35,1);transition:-webkit-box-shadow .2s cubic-bezier(.64,0,.35,1);transition:box-shadow .2s cubic-bezier(.64,0,.35,1);transition:box-shadow .2s cubic-bezier(.64,0,.35,1),-webkit-box-shadow .2s cubic-bezier(.64,0,.35,1)}input[type=checkbox],input[type=email],input[type=number],input[type=password],input[type=radio],input[type=search],input[type=tel],input[type=text],input[type=url],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none}input[type=email],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=url],select,textarea{min-height:3.4rem}textarea{min-height:6.5rem;padding-top:.6rem;padding-bottom:.6rem}.block{display:block;width:100%}select{padding-right:3.2rem;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='rgb(99,115,129)");background-size:21px 21px;background-repeat:no-repeat;background-position:right .7rem top .7rem;-webkit-box-shadow:0 0 0 1px transparent,0 1px 0 0 rgba(22,29,37,.05);box-shadow:0 0 0 1px transparent,0 1px 0 0 rgba(22,29,37,.05)}label{display:block;color:#212b35;font-weight:400;margin-bottom:5px}.red{color:#B30000}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:2rem;font-weight:400}h1{font-size:2.4rem;line-height:3.2rem}h2{font-size:2.1rem;line-height:2.8rem}h3{font-size:1.8rem}h3,h4{line-height:2.4rem}h4{font-size:2rem}h5{font-size:1.6rem;line-height:2.4rem;font-weight:600}h6{font-size:1.2rem;line-height:2rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}@media (min-width:550px){h1{font-size:3.3rem;line-height:4rem}h2{font-size:2.6rem;line-height:3.6rem}h3{font-size:2rem;line-height:2.8rem}}ul.inline
-li{display:inline-block;margin-right:10px;list-style:none}hr{border-bottom:none;border-top:1px solid #ccc;margin-bottom:10px}.order-description{margin-bottom:20px}.row-form{margin-bottom:.5em}.row-form>input,.row-form>textarea{display:none}.row-form.form-input-show{margin-bottom:2em}.row-form.form-input-show>input,.row-form.form-input-show>textarea{display:block}form .btn-order{background:#81bd4b;-webkit-box-shadow:none;box-shadow:none;font-weight:700;text-transform:uppercase;border:none;height:48px;color:#212121}form .btn-order:active,form .btn-order:focus,form .btn-order:hover{background:#212121;border:none;-webkit-box-shadow:none;box-shadow:none;color:#ccc}.variants-wrapper ul
-li{margin-bottom:5px;clear:both}.variants-wrapper ul
-input{max-width:100px;display:inline-block}a.btn-order{background:#81bd4b;-webkit-box-shadow:none;box-shadow:none;font-weight:700;text-transform:uppercase;border:none;color:#212121;padding:15px
-0;text-align:center;text-decoration:none}a.btn-order:hover{background:#212121;color:#ccc}
-    </style>
-    <meta property="og:stie_name" content="Loop.id">
-    <meta property="fb:app_id" content="167148820594908">
-    <meta property="og:type" content="Website">
-    <meta property="og:url" content="https://mauorder.online/daftariconnet">    <meta property="og:image" content="/mauorder.online/images/og/whatsapp.png>
-    <meta property="og:image" content="https://mauorder.online/images/og/whatsapp.png">    <meta property="og:description" content="Order Daftar Iconnet">
-    <meta property="og:title" content="Daftar Iconnet">
-    <meta property="og:description" content="Order Daftar Iconnet">
-    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-JVEQ2H05GR&l=dataLayer&cx=c"></script>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P2TL73R"></script>
-    <script>
-        if('serviceWorker'in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/service-worker.js',{scope:'/',});});}
-    </script>
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P2TL73R');
-    </script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-523841651"></script>
-    <script>
-        window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-        gtag('js',new Date());gtag('config','AW-523841651');gtag('event','conversion',{'send_to':'AW-523841651/nJqUCJ-0tegBEPPg5PkB'});
-    </script>
-    <script>var lptm=!1;setTimeout(function(){lptm=!0},1);</script>
-    <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/523841651/?random=1695176091295&amp;cv=11&amp;fst=1695176091295&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;auid=1474184544.1695115657&amp;fledge=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-    <meta http-equiv="origin-trial" content="A+xK4jmZTgh1KBVry/UZKUE3h6Dr9HPPioFS4KNCzify+KEoOii7z/goKS2zgbAOwhpZ1GZllpdz7XviivJM9gcAAACFeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiQXR0cmlidXRpb25SZXBvcnRpbmdDcm9zc0FwcFdlYiIsImV4cGlyeSI6MTcwNzI2Mzk5OSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-    <script attributionsrc="" type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion/523841651/?random=1695176091332&amp;cv=11&amp;fst=1695176091332&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;label=nJqUCJ-0tegBEPPg5PkB&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;gtm_ee=1&amp;auid=1474184544.1695115657&amp;fledge=1&amp;capi=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;data=event%3Dconversion&amp;rfmt=3&amp;fmt=4"></script>
-    <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/523841651/?random=1695176091373&amp;cv=11&amp;fst=1695176091373&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;label=kvh4CM6Jo8MDEPPg5PkB&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;userId=mauorder.online&amp;auid=1474184544.1695115657&amp;fledge=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;rfmt=3&amp;fmt=4"></script>
-    <meta http-equiv="origin-trial" content="A+xK4jmZTgh1KBVry/UZKUE3h6Dr9HPPioFS4KNCzify+KEoOii7z/goKS2zgbAOwhpZ1GZllpdz7XviivJM9gcAAACFeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiQXR0cmlidXRpb25SZXBvcnRpbmdDcm9zc0FwcFdlYiIsImV4cGlyeSI6MTcwNzI2Mzk5OSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-    <script attributionsrc="" type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion/523841651/?random=1695176091385&amp;cv=11&amp;fst=1695176091385&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;label=i8fBCOG3wMMDEPPg5PkB&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;value=0&amp;bttype=purchase&amp;auid=1474184544.1695115657&amp;fledge=1&amp;capi=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;rfmt=3&amp;fmt=4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
 </head>
 <body>
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2TL73R" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <main id="app">
-        <section style="padding-top: 3%;">
-            <article><div class="columns six card"><p class="align-center">Silahkan kontak CS kami via WhatsApp</p><div class="row">
-                <br><br>
-                <label for="contact">Kontak</label>
-                <input type="text" id="contact" readonly="" value="6285979714638"></div><div class="row">
-                <label for="message">Format pesan</label><textarea readonly="" id="message" rows="6">Hallo kak,
-                
-                Saya mau berlangganan ICONNET. Bisa jelaskan informasi terkait ICONNET?
-                
-                terima kasih</textarea></div>
-                <a href="https://api.whatsapp.com/send?phone=6285979714638&amp;text=Hallo%20kak%2C%0D%0A%0D%0ASaya%20mau%20berlangganan%20ICONNET.%20Bisa%20jelaskan%20informasi%20terkait%20ICONNET%3F%0D%0A%0D%0Aterima%20kasih" class="button btn-order block" id="link-cta">Chat Dengan CS</a></div>
-                </article>
-    </section>
-    </main>
-    <script>
-        var lpv={"delay":"1","url":"whatsapp:\/\/send\/?phone=6282145254376\u0026text=Hallo%20kak%2C%0D%0A%0D%0ASaya%20mau%20berlangganan%20ICONNET.%20Bisa%20jelaskan%20informasi%20terkait%20ICONNET%3F%0D%0A%0D%0Aterima%20kasih","urlFallback":"","urlBtn":"whatsapp:\/\/send\/?phone=6285979714638\u0026text=Hallo%20kak%2C%0D%0A%0D%0ASaya%20mau%20berlangganan%20ICONNET.%20Bisa%20jelaskan%20informasi%20terkait%20ICONNET%3F%0D%0A%0D%0Aterima%20kasih","urlBtnFallback":"https:\/\/api.whatsapp.com\/send?phone=6285979714638\u0026text=Hallo%20kak%2C%0D%0A%0D%0ASaya%20mau%20berlangganan%20ICONNET.%20Bisa%20jelaskan%20informasi%20terkait%20ICONNET%3F%0D%0A%0D%0Aterima%20kasih"};if("complete"===document.readyState||"loaded"===document.readyState||"interactive"===document.readyState)lpca();else if(document.addEventListener){var lpdl=function o(){lpca(),document.removeEventListener("DOMContentLoaded",o)};document.addEventListener("DOMContentLoaded",lpdl)}
-else if(document.attachEvent){var lprs=function o(){lpca(),document.detachEvent("onreadystatechange",o)};document.attachEvent("onreadystatechange",lprs)}
-else window.onload=lpca;function lpca(){var o=document.querySelector("#link-cta");o&&o.addEventListener("click",function(o){o.preventDefault(),lptm?setTimeout(function(){lprr(lpv.urlBtn,lpv.urlBtnFallback)},250):lprr(lpv.urlBtn,lpv.urlBtnFallback)});}
-function lprr(o,e){if(o&&(window.location=o,e)){var t=Date.now(),n=window.setTimeout(function(){Date.now()-t>1250||(window.location=e)},1e3);window.addEventListener("blur",function(){window.clearTimeout(n)})}}
-document.addEventListener&&document.addEventListener("DOMContentLoaded",function(){lptm||"off"!==lpv.delay&&lprr(lpv.url,lpv.urlFallback)}),window.addEventListener("load",function(){lptm&&"off"!==lpv.delay&&(lpv.delay>0?setTimeout(function(){lprr(lpv.url,lpv.urlFallback)},1e3*lpv.delay):lprr(lpv.url,lpv.urlFallback))});
-    </script>
-    <iframe allow="join-ad-interest-group" data-tagging-id="AW-523841651" data-load-time="1695176091326" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/523841651?random=1695176091295&amp;cv=11&amp;fst=1695176091295&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;auid=1474184544.1695115657&amp;fledge=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;data=event%3Dgtag.config">
-    #document
-    <html>
-        <head></head>
-        <body></body>
-    </html>
-</iframe>
-    <iframe allow="join-ad-interest-group" data-tagging-id="AW-523841651/nJqUCJ-0tegBEPPg5PkB" data-load-time="1695176091339" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/523841651?random=1695176091332&amp;cv=11&amp;fst=1695176091332&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;label=nJqUCJ-0tegBEPPg5PkB&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;gtm_ee=1&amp;auid=1474184544.1695115657&amp;fledge=1&amp;capi=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;data=event%3Dconversion">
-    #document
-    <html>
-        <head></head>
-        <body></body>
-        </html>
-</iframe>
-<iframe allow="join-ad-interest-group" data-tagging-id="AW-523841651" data-load-time="1695178852979" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/523841651?random=1695178852965&amp;cv=11&amp;fst=1695178852965&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;auid=1474184544.1695115657&amp;fledge=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;data=event%3Dgtag.config">
-    #document 
-    <html>
-        <head></head>
-        <body></body>
-        </html>
-</iframe>
-<iframe allow="join-ad-interest-group" data-tagging-id="AW-523841651/nJqUCJ-0tegBEPPg5PkB" data-load-time="1695178852989" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/523841651?random=1695178852985&amp;cv=11&amp;fst=1695178852985&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be39i0&amp;u_w=658&amp;u_h=508&amp;url=https%3A%2F%2Fmauorder.online%2Fdaftariconnet&amp;ref=https%3A%2F%2Fdaftariconnet.com%2F&amp;label=nJqUCJ-0tegBEPPg5PkB&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Daftar%20Iconnet&amp;gtm_ee=1&amp;auid=1474184544.1695115657&amp;fledge=1&amp;capi=1&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.188%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.188&amp;uamb=1&amp;uam=Nexus%205&amp;uap=Android&amp;uapv=6.0&amp;uaw=0&amp;data=event%3Dconversion">
-    #document
-    <html>
-        <head></head>
-        <body></body>
-        </html>
-</iframe>
-<!--[if Loops]></body></html><![endif]-->
+    <div class="whatsapp">
+        <form id="whatsapp-form">
+            <div class="card mb-3">
+                <div class="card-whatsapp">
+                    <img src="assets/Iconnet.png" alt="" class="logo">
+                  <div>
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required>
+                  </div>
+                  <div>
+                    <label for="pesan" class="form-label">Masukkan Pesan</label>
+                    <textarea class="form-control" id="pesan" name="pesan" rows="3"></textarea>
+                  </div>
+                  <div style="padding: 10px;">
+                    <button type="button" onclick="kirimWhatsApp()">Kirim ke WhatsApp</button>
+                  </div>
+                </div>
+              </div>
+        </form>
+        <script>
+            function kirimWhatsApp() {
+                var nama = document.getElementById("nama").value;
+                var pesan = document.getElementById("pesan").value;
+    
+                if (nama === "" || pesan === "") {
+                    alert("Harap isi semua field terlebih dahulu.");
+                } else {
+                    var message = "Halo Ka!, saya " + nama + ". " + pesan;
+                    window.location.href = "https://api.whatsapp.com/send?phone=NomorWhatsAppTujuan&text=" + encodeURIComponent(message);
+                }
+            }
+        </script>
+    </div>
 </body>
 </html>
