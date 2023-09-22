@@ -163,6 +163,19 @@ input[type="text"] {
   border: 1px solid #ccc;
 }
 
+.mysection {
+  /* Gaya khusus untuk section dengan kelas 'my-section' */
+  background-color: #123649;
+  display: flex;
+  height: 100vh;
+  flex-direction: column; /* Atau row, tergantung pada tata letak yang Anda inginkan */
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin: auto;
+  color: #fff;
+  /* ... tambahkan properti CSS lain sesuai kebutuhan ... */
+}
 
 /*--------------------------------------------------------------
 # Footer
