@@ -125,6 +125,11 @@ body {
   color: #ffffff; /* Warna teks tombol */
 }
 
+.maps {
+  text-decoration: none;
+  color: #000;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
