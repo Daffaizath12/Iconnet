@@ -171,7 +171,8 @@ input[type="text"] {
   flex-direction: column; /* Atau row, tergantung pada tata letak yang Anda inginkan */
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: auto;
   color: #fff;
   /* ... tambahkan properti CSS lain sesuai kebutuhan ... */
