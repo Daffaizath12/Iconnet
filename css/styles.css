@@ -130,6 +130,20 @@ body {
   color: #000;
 }
 
+.mysection {
+  /* Gaya khusus untuk section dengan kelas 'my-section' */
+  background-color: #123649;
+  display: flex;
+  flex-direction: column; /* Atau row, tergantung pada tata letak yang Anda inginkan */
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin: auto;
+  color: #fff;
+  /* ... tambahkan properti CSS lain sesuai kebutuhan ... */
+}
+
+
 
 /*--------------------------------------------------------------
 # Footer
