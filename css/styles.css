@@ -11203,3 +11203,9 @@ html {
 .content{
   flex: 1;
 }
+
+.centered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
