@@ -163,21 +163,55 @@ input[type="text"] {
   border: 1px solid #ccc;
 }
 
-.mysection {
-  /* Gaya khusus untuk section dengan kelas 'my-section' */
-  background-color: #123649;
-  display: flex;
-  height: 100vh;
-  flex-direction: column; /* Atau row, tergantung pada tata letak yang Anda inginkan */
-  justify-content: center;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: auto;
-  color: #fff;
-  /* ... tambahkan properti CSS lain sesuai kebutuhan ... */
+/* Gaya untuk tombol */
+.floating-button {
+  display: none; /* Tombol awalnya disembunyikan */
+  position: fixed;
+  bottom: 10px; /* Jarak dari bawah layar */
+  right: 10px; /* Jarak dari kanan layar */
+  background-color: transparent; /* Warna latar belakang tombol */
+  color: #0dcaf0; /* Warna teks tombol */
+  border: #022c58;
+  padding-right: 5px;
+  padding-top: 4px;
+  border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+  text-align: center;
 }
 
+/* Gaya untuk ikon dalam tombol */
+.floating-button i {
+  font-size: 24px; /* Ukuran ikon */
+
+}
+
+
+
+.mysection{
+  background-color: #022c58;
+  color: #fff;
+  padding: 20px;
+}
+
+@media (max-width: 768px){
+  .row{
+    flex-direction: column;
+  }
+  .feature{
+    text-align: center;
+    margin: 20px;
+  }
+}
+@media (max-width: 769px){
+  .row{
+    flex-direction: row;
+  }
+  .feature{
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

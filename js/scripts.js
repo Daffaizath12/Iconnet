@@ -14,4 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  
+
+  const scrollButton = document.getElementById('scrollButton');
+
+  function checkScrollPosition() {
+      if (window.scrollY > 0) {
+          scrollButton.style.display = 'block'; // Tampilkan tombol saat tidak berada di bagian atas halaman
+      } else {
+          scrollButton.style.display = 'none'; // Sembunyikan tombol saat berada di bagian atas halaman
+      }
+  }
+
+  function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Panggil fungsi checkScrollPosition() saat menggulir halaman
+  window.addEventListener('scroll', checkScrollPosition);
+
+  // Panggil fungsi checkScrollPosition() saat halaman dimuat
+  window.addEventListener('load', checkScrollPosition);
