@@ -186,6 +186,13 @@ input[type="text"] {
 
 }
 
+@media (max-width: 768px) {
+  .row-cols-1 {
+    /* Ubah jumlah kolom yang ditampilkan pada tampilan mobile di sini */
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 
 
 .mysection{
