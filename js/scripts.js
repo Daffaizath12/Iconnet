@@ -34,3 +34,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Panggil fungsi checkScrollPosition() saat halaman dimuat
   window.addEventListener('load', checkScrollPosition);
+
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      }
+    }
+  });
+
+  // Fungsi untuk menanggapi klik pada gambar
+  $('.image-link').click(function(event) {
+    var imageUrl = $(this).find('img').attr('src');
+    $('#modalImage').attr('src', imageUrl);
+  });
+});

@@ -11260,12 +11260,16 @@ html {
   border: 1px solid #ccc;
   margin-bottom: 5px;
 }
+.accordion-button.collapsed:hover{
+  background-color: #022c58;
+}
 .accordion-button{
   width: 100%;
   text-align: left;
   padding: 10px;
-  background-color: #0dcaf0;
+  background-color: #2fb2c1;
   cursor: pointer;
+  color: #fff;
 }
 .accordion-button:focus{
   padding: 10px;
@@ -11307,4 +11311,13 @@ html {
 .scrolling-wrapper img {
   max-width: 100%;
   height: auto;
+}
+
+.card:hover {
+  background-color: #0dcaf0; /* Ubah sesuai warna yang Anda inginkan */
+}
+
+/* Ganti warna latar belakang card saat dihover untuk card yang spesifik */
+.card.special:hover {
+  background-color: #0dcaf0; /* Ubah sesuai warna yang Anda inginkan */
 }
