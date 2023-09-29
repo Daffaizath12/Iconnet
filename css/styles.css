@@ -11284,3 +11284,27 @@ html {
   height: auto;
   transition: height 0.3s ease-in-out;
 }
+
+.img-container {
+  display: flex;
+}
+
+.img-container img {
+  flex: 1; /* Menggunakan flexbox untuk membagi ruang dengan proporsi yang sama */
+  margin: 0 5px; /* Menambahkan margin di antara gambar */
+}
+
+.scrolling-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-top: 30px; /* Pindahkan padding ke sini */
+}
+
+.scrolling-wrapper .col-12 {
+  display: inline-block;
+}
+
+.scrolling-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
