@@ -165,21 +165,86 @@ input[type="text"] {
 }
 
 /* Gaya untuk tombol */
-.floating-button {
-  display: none; /* Tombol awalnya disembunyikan */
+
+.floating-content {
   position: fixed;
-  bottom: 10px; /* Jarak dari bawah layar */
-  right: 10px; /* Jarak dari kanan layar */
-  background-color: transparent; /* Warna latar belakang tombol */
-  color: #0dcaf0; /* Warna teks tombol */
-  border: #022c58;
-  padding-right: 5px;
-  padding-top: 4px;
-  border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
-  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
 }
+
+.floating-item {
+  position: fixed;
+  bottom: 10px;
+  right: 160px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.floating-content img {
+  width: 120px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: 40px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  display: flex;
+  margin: auto;
+}
+.floating-content p {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Gaya untuk popup */
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 160px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup .close {
+  float: right;
+  cursor: pointer;
+}
+
+.popup .popup-content {
+  text-align: left;
+}
+
+.wa{
+  text-decoration: none;
+  color: #022c58;
+}
+
+/* Gaya untuk gambar */
+.image-container img{
+  width: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  display: flex;
+  padding: 5px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.landscape-image img{
+  width: 120px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: 120px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
 
 /* Gaya untuk ikon dalam tombol */
 .floating-button i {

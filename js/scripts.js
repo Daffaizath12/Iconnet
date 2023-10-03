@@ -59,3 +59,71 @@ $(document).ready(function(){
     $('#modalImage').attr('src', imageUrl);
   });
 });
+
+function showPopup() {
+  const popup = document.getElementById('textPopup');
+  popup.style.display = 'block';
+}
+
+function closePopup() {
+  const popup = document.getElementById('textPopup');
+  popup.style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const landscapeImage = document.querySelector('.landscape-image img');
+  landscapeImage.addEventListener('click', showPopup);
+
+  document.body.addEventListener('click', function(event) {
+    const popup = document.getElementById('textPopup');
+    
+    // Menutup popup jika yang diklik bukan bagian dari popup atau gambar trigger
+    if (!popup.contains(event.target) && event.target !== landscapeImage) {
+      closePopup();
+    }
+  });
+});
+
+
+function showContent() {
+  const content = document.querySelectorAll('.floating-item, .floating-content');
+  content.forEach(function(item) {
+    item.style.display = 'block';
+  });
+}
+
+function hideContent() {
+  const content = document.querySelectorAll('.floating-item, .floating-content');
+  content.forEach(function(item) {
+    item.style.display = 'none';
+  });
+}
+
+// Fungsi untuk menampilkan pop-up
+function showPopup() {
+  const popup = document.getElementById('textPopup');
+  popup.style.display = 'block';
+}
+
+// Fungsi untuk menutup pop-up
+function closePopup() {
+  const popup = document.getElementById('textPopup');
+  popup.style.display = 'none';
+}
+
+// Fungsi untuk memeriksa apakah pengguna berada di halaman paling bawah
+function isAtBottom() {
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+  const scrollTop = window.scrollY || window.pageYOffset || document.body.scrollTop || 0;
+  return (documentHeight - windowHeight - scrollTop) < 10; // Toleransi 10 piksel
+}
+
+// Memeriksa posisi scroll saat pengguna menggulirkan halaman
+window.addEventListener('scroll', function() {
+  if (isAtBottom()) {
+    showContent();  // Tampilkan konten saat pengguna di halaman paling bawah
+  } else {
+    hideContent();  // Sembunyikan konten jika pengguna tidak di halaman paling bawah
+  }
+});
