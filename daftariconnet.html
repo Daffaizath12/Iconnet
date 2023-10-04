@@ -24,13 +24,16 @@
             <div class="card mb-3">
                 <div class="card-whatsapp">
                     <img src="assets/Iconnet.png" alt="" class="logo">
-                  <div>
+                  <div class="row">
                     <label for="nama">Nama Lengkap</label>
                     <input type="text" id="nama" name="nama" required>
                   </div>
-                  <div>
-                    <label for="pesan" class="form-label">Masukkan Pesan</label>
-                    <textarea class="form-control" id="pesan" name="pesan" rows="3"></textarea>
+                  <div class="row">
+                    <label for="pesan">From Pemensanan</label>
+                    <textarea readonly="" id="pesan" rows="4"> Saya mau berlangganan ICONNET. 
+Bisa jelaskan informasi terkait ICONNET? 
+terima kasih
+                    </textarea>
                   </div>
                   <div style="padding: 10px;">
                     <button type="button" onclick="kirimWhatsApp()">Kirim ke WhatsApp</button>
