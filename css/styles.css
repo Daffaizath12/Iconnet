@@ -178,14 +178,14 @@ input[type="text"] {
 .floating-item {
   position: fixed;
   bottom: 10px;
-  right: 160px;
+  right: 80px;
   color: #fff;
   border-radius: 5px;
 }
 
 .floating-content img {
-  width: 120px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
-  height: 40px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  width: 80px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: 80px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
   display: flex;
   margin: auto;
 }
@@ -238,9 +238,10 @@ input[type="text"] {
   cursor: pointer;
 }
 .landscape-image img{
-  width: 120px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
-  height: 120px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  width: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
   display: flex;
+  padding: 5px;
   margin: 0 auto;
   cursor: pointer;
 }
